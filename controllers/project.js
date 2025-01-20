@@ -44,7 +44,11 @@ getById = async (req, res) =>{
 create = async (req, res) =>{
     var project = {
         name: req.body.name,
-        description: req.body.description   
+        version: req.body.version,
+        categoryId: req.body.categoryId,
+        releaseDate: req.body.releaseDate,
+        description: req.body.description,
+        status: req.body.status   
     };
 
     try {
