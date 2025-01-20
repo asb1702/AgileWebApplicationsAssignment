@@ -5,8 +5,6 @@ const Project = db.project;
 
 
 
-//YOU HAVE EDITS YOU NEED TO MAKE HERE YOU NUMPTY
-
 getAll = async (req, res) =>{
     const project = await Project.findAll();
     res.status(200).json(project);
@@ -86,7 +84,11 @@ deleting = async (req, res) =>{
     
     const project = {
         name: req.body.name,
-        description: req.body.description
+        version: req.body.version,
+        categoryId: req.body.categoryId,
+        releaseDate: req.body.releaseDate,
+        description: req.body.description,
+        status: req.body.status   
 
     };
 
